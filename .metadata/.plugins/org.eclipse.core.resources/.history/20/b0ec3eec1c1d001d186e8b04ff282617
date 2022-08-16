@@ -1,0 +1,12 @@
+package com.emp.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class EmpController {
+
+	@RequestMapping("/hello")
+	public String hello() {
+		return "IIHT Demo Starter Welcome'''";
+	}
+}

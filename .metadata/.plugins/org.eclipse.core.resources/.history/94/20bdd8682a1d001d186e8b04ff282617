@@ -1,0 +1,7 @@
+package com.emp.service;
+
+public class EmployeeServiceImpl implements IEmployeeService {
+
+	@AutoWired 
+	IEmployeeRepositoryService iEmployeeRepositoryService;
+}

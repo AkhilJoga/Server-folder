@@ -1,0 +1,9 @@
+package com.emp.service;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface IEmployeeRepositoryService  extends JpaRepository {
+
+	
+	
+}

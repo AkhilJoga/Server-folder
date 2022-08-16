@@ -1,0 +1,20 @@
+package com.emp.model;
+
+import org.hibernate.annotations.Entity;
+
+@Entity
+public class Employee {
+
+	private long id;
+	
+	private String firstName;
+	
+	private String lastName;
+	
+	private String email;
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,22 @@
+package com.emp.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.emp.model.Employee;
+
+public class EmployeeServiceImpl implements IEmployeeService {
+
+	@Autowired 
+	IEmployeeRepositoryService iEmployeeRepositoryService;
+
+	@Override
+	public Integer saveEmployee(Employee employee) {
+		// TODO Auto-generated method stub
+		
+		Employee saveEmployee = iEmployeeRepositoryService.save(employee);
+		
+		return saveEmployee.getId();
+	}
+	
+	
+}
