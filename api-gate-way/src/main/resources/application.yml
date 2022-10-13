@@ -1,0 +1,27 @@
+#server:
+#  port: 7865
+#spring:#  application:#    name: GATEWAYAPI#  cloud:#    gateway:#      discovery:#        locator:#          enabled: true
+#          lower-case-service-id: true
+#      routes:
+#      #      - id : ABCD
+#        uri: lb://SPORTDEMO
+#        predicates:#        - Path=/findById/{id}
+#      - id : ABCD1
+#        uri: lb://SPORTDEMO
+#        predicates:
+#        - Path=/createFacility
+#      - id : ABCD2
+#        uri: lb://SPORTDEMO
+#        predicates:#        - Path=/createSportUser  
+#      - id: ABCD3
+#        uri: lb://SPORTDEMO
+#        predicates:#        - Path=/updateSport/{id}
+#      - id: ABCD4
+#        uri: lb://SPORTDEMO
+#        predicates:#        - Path=/getByEmail/{email}
+#     
+spring:
+  application:
+    name: api-gate-way-service
+  config:
+    import: optional:configserver:http://localhost:8888

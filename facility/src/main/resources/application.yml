@@ -1,0 +1,31 @@
+#server:
+#  port: 4321
+#spring:
+#  application:
+#    name: SPORTFACILITY
+#  datasource:
+#    password: pass@word1
+#    url: jdbc:mysql://localhost:3306/sport_demo?useSSL=false
+#    username: root
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL8Dialect
+#  boot:
+#    admin:
+#      client:
+#        url: http://localhost:7890/
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: '*'
+
+spring:
+  application:
+    name: facility-service
+  config:
+    import: optional:configserver:http://localhost:8888
+     

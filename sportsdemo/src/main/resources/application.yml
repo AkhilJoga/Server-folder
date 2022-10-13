@@ -1,0 +1,27 @@
+spring:
+#  datasource:
+#    password: pass@word1
+#    url: jdbc:mysql://localhost:3306/sport_demo?useSSL=false
+#    username: root
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL8Dialect
+  application:
+    name: sportsdemo-service
+#  boot:
+#    admin:
+#      client:
+#        url: http://localhost:7890/
+  config:
+    import: optional:configserver:http://localhost:8888
+  
+#  boot:
+#    admin:
+#      client:
+#        url: http://localhost:7890/
+    
+ #server:
+#  port: 1234

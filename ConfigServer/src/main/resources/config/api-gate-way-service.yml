@@ -1,0 +1,28 @@
+server:
+  port: 7865
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      
+spring:  application:    name: GATEWAYAPI  cloud:    gateway:      discovery:        locator:          enabled: true
+          lower-case-service-id: true
+      routes:
+            - id : ABCD
+        uri: lb://SPORTSDEMO-SERVICE
+        predicates:        - Path=/findById/{id}
+      - id : ABCD1
+        uri: lb://SPORTSDEMO-SERVICE
+        predicates:
+        - Path=/createFacility
+      - id : ABCD2
+        uri: lb://SPORTSDEMO-SERVICE
+        predicates:        - Path=/createSportUser  
+      - id: ABCD3
+        uri: lb://SPORTSDEMO-SERVICE
+        predicates:        - Path=/updateSport/{id}
+      - id: ABCD4
+        uri: lb://SPORTSDEMO-SERVICE
+        predicates:        - Path=/getByEmail/{email}
+     
